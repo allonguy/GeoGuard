@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="geoguard.geoguard" >
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- Adding the background app boot permission -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Unlock"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainScreen"
+            android:label="@string/title_activity_main_screen" >
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name=".HomeBase"
+            android:label="@string/title_activity_home_base" >
+        </activity>
+        <activity
+            android:name=".MobilePasswords"
+            android:label="@string/title_activity_mobile_passwords" >
+        </activity>
+        <activity
+            android:name=".LocalPasswords"
+            android:label="@string/title_activity_local_passwords" >
+        </activity>
+        <activity
+            android:name=".Insert"
+            android:label="@string/title_activity_insert" >
+        </activity>
+        <activity
+            android:name=".SignUp"
+            android:label="@string/title_activity_sign_up" >
+        </activity>
+        <activity android:name=".Location" >
+        </activity>
+
+        <!-- To start service -->
+        <service
+            android:name=".NotifyService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <!-- Schedule alarm to run service periodically -->
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </receiver>
+
+        <!-- Declaring broadcast receiver for BOOT_COMPLETED event. -->
+        <receiver
+            android:name=".NotifyReceiver" >
+        <!--    android:enabled="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter> -->
+
+        </receiver>
+
+    </application>
+
+</manifest>

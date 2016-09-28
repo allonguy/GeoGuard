@@ -1,0 +1,85 @@
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".Unlock">
+    <RelativeLayout
+        android:layout_alignParentRight="true"
+
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Settings"
+        android:layout_marginLeft="10pt"
+        android:layout_marginRight="10pt"
+        android:layout_marginTop="10pt"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="130dp"
+            android:layout_centerInParent="true"
+            android:textSize="30pt"
+            android:textColor="#00AA00"
+            android:text="GeoGuard"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Input"
+        android:layout_marginLeft="10pt"
+        android:layout_marginRight="10pt"
+        android:layout_marginTop="10pt">
+        <EditText
+            android:id="@+id/username"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:inputType="textCapWords"
+            android:hint="Username"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/confirm"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:inputType="textPassword"
+            android:hint="Re-Enter Password"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_weight="100"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Enter"
+        android:layout_marginLeft="10pt"
+        android:layout_marginRight="10pt"
+        android:layout_marginTop="10pt">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="8pt"
+            android:text="Enter"
+            android:id="@+id/btnEnter">
+        </Button>
+
+    </LinearLayout>
+</LinearLayout>
